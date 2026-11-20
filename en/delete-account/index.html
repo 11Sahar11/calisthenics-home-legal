@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="How to delete a Calisthenics at Home account: sign out on the device, and request cloud deletion by email within 30 days.">
+<title>Delete account — Calisthenics at Home</title>
+<link rel="stylesheet" href="../../style.css">
+<link rel="canonical" href="https://11sahar11.github.io/calisthenics-home-legal/en/delete-account/">
+<link rel="alternate" hreflang="en" href="https://11sahar11.github.io/calisthenics-home-legal/en/delete-account/">
+<link rel="alternate" hreflang="he" href="https://11sahar11.github.io/calisthenics-home-legal/delete-account/">
+<link rel="alternate" hreflang="x-default" href="https://11sahar11.github.io/calisthenics-home-legal/delete-account/">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+<div class="top-inner">
+<div class="top-row">
+<a class="brand" href="../">Calisthenics at Home</a>
+<a class="lang" href="../../delete-account/" hreflang="he" lang="he">עברית</a>
+</div>
+<p class="bars" aria-hidden="true"><i></i><i></i><i></i><i></i></p>
+</div>
+</header>
+<nav class="nav" aria-label="Documents">
+<a href="../privacy/">Privacy</a>
+<a href="../terms/">Terms</a>
+<a href="./" aria-current="page">Delete account</a>
+</nav>
+<main class="wrap" id="main">
+<h1>Delete account</h1>
+<p class="meta">Calisthenics at Home (קליסטניקס מהבית, calisthenics-home). Effective date: <time datetime="2026-11-21">November 21, 2026</time></p>
+<p class="lede">The app has no button that deletes the cloud account. Sign-out removes the copy on that device only. Deleting the account and the cloud copy is an email request, and we complete it within 30 days. The app’s screens are in Hebrew.</p>
+<div class="notice">
+<p><strong>This is a fitness app, not a medical service.</strong> It makes no medical claims and no weight-loss promises. Consult a doctor before starting exercise.</p>
+<p>You must be 13 or older to use the app.</p>
+</div>
+
+<h2 id="signed-in">If you have an account</h2>
+<p>An account is created when you sign up with email (a one-time code, no password) or, if the button is shown, with „המשך עם Google” (continue with Google).</p>
+<h3>What you can do inside the app</h3>
+<ol>
+<li>Open the „תוכנית” (plan) tab.</li>
+<li>Scroll to „החשבון שלי” (my account). The email you signed in with is shown there.</li>
+<li>Tap „התנתקות” (sign out).</li>
+</ol>
+<p>Sign-out ends the session and deletes the <code>kalis</code> key from that device. It does not delete the Supabase user or the row in the <code>user_state</code> table. Signing in again, on that device or another, brings the cloud copy back.</p>
+<p>On the „משקל” (weight) screen you can delete one weigh-in at a time, with the trash icon. If you are signed in, the cloud copy is updated without that weigh-in. That is not account deletion.</p>
+<h3>Deleting the account itself — by email</h3>
+<p>Send a request to <a href="mailto:tailgild.store@gmail.com?subject=Delete%20calisthenics-home%20account">tailgild.store@gmail.com</a>. Include the email address on the account, whether you signed in with Google or with a code, and a clear request to delete the account and the cloud data. There is no password to send, and you do not need to send identity documents.</p>
+<p>If the message does not include the account email, we will reply and ask for it. The 30 days start when we have that address.</p>
+
+<h2 id="local">If you do not have an account</h2>
+<p>If you chose „המשך בלי חשבון” (continue without an account), there is no cloud user to delete. Your name, workouts, and weigh-ins are only on the device, under the key <code>kalis</code>. The screens have no button that deletes all local information at once, and there is no sign-out button.</p>
+<p>A single weigh-in is deleted on the weight screen. To delete the whole local copy, clear the app’s stored data on the device. If you opened the app in a browser, clear that site’s data. An email to us will not find a cloud copy that was never created.</p>
+<p>If you started sign-up and did not finish, a <code>kalis_pending</code> key (name, and maybe a weight or goal) may remain on the device. Clearing storage removes that too. If a code was sent, a user with that email and name may already exist. That user is deleted by the email request above.</p>
+
+<h2 id="deleted">What is deleted in the cloud</h2>
+<p>After an email request that identifies the account, within 30 days, we delete:</p>
+<ul>
+<li>The sign-in user: the email address, the name stored with the sign-in, and the session.</li>
+<li>Your row in the <code>user_state</code> table, including <code>user_id</code>, <code>data</code>, and <code>updated_at</code>.</li>
+<li>Inside <code>data</code>: the name, the copy of the email, a weight goal if you typed one, the start date, weigh-ins (date and kilograms), finished workouts (date, A or B, stage, and a feeling if you chose one), a manual stage choice, and the rotating-exercise counters.</li>
+</ul>
+<p>We do not keep a copy of the workouts, weigh-ins, or profile for the app after that. Deleting the cloud copy does not by itself remove <code>kalis</code> or <code>kalis_pending</code> on a device. Remove those by signing out (if you were signed in) or by clearing the app’s storage on each device you used.</p>
+<p>The message you sent is used to carry out the deletion. It is not added to the app and it is not used for advertising.</p>
+
+<h2 id="kept">What this request does not erase</h2>
+<ul>
+<li>Data still in a device’s storage, until you clear it or sign out on that device.</li>
+<li>YouTube history, if you opened a video link. That is deleted at YouTube, not by us.</li>
+<li>Request logs held by the font host, the library host, or the cloud host, if they keep such logs. We do not keep a separate copy of the workout log outside <code>user_state</code>.</li>
+</ul>
+
+<h2 id="after">After deletion</h2>
+<p>You can keep using the app without an account, on a device whose storage was cleared. Signing in with the same email after deletion creates a new empty account. The deleted copy cannot be restored from the app.</p>
+
+<h2 id="contact">Contact</h2>
+<p><a href="mailto:tailgild.store@gmail.com?subject=Delete%20calisthenics-home%20account">tailgild.store@gmail.com</a></p>
+<p class="footer">Hebrew version: <a href="../../delete-account/" hreflang="he" lang="he">עברית</a>. See also the <a href="../privacy/">privacy policy</a>.</p>
+</main>
+</body>
+</html>

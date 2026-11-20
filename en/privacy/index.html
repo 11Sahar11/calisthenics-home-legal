@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Privacy policy for Calisthenics at Home: local kalis storage, optional Supabase account, and no analytics SDK.">
+<title>Privacy policy — Calisthenics at Home</title>
+<link rel="stylesheet" href="../../style.css">
+<link rel="canonical" href="https://11sahar11.github.io/calisthenics-home-legal/en/privacy/">
+<link rel="alternate" hreflang="en" href="https://11sahar11.github.io/calisthenics-home-legal/en/privacy/">
+<link rel="alternate" hreflang="he" href="https://11sahar11.github.io/calisthenics-home-legal/privacy/">
+<link rel="alternate" hreflang="x-default" href="https://11sahar11.github.io/calisthenics-home-legal/privacy/">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+<div class="top-inner">
+<div class="top-row">
+<a class="brand" href="../">Calisthenics at Home</a>
+<a class="lang" href="../../privacy/" hreflang="he" lang="he">עברית</a>
+</div>
+<p class="bars" aria-hidden="true"><i></i><i></i><i></i><i></i></p>
+</div>
+</header>
+<nav class="nav" aria-label="Documents">
+<a href="./" aria-current="page">Privacy</a>
+<a href="../terms/">Terms</a>
+<a href="../delete-account/">Delete account</a>
+</nav>
+<main class="wrap" id="main">
+<h1>Privacy policy</h1>
+<p class="meta">Calisthenics at Home (קליסטניקס מהבית, calisthenics-home). Effective date: <time datetime="2026-11-21">November 21, 2026</time></p>
+<p class="lede">This policy describes what the app stores, where, and why. The app’s own screens are in Hebrew. Button names below are the Hebrew labels you will see.</p>
+<div class="notice">
+<p><strong>This is a fitness app, not a medical service.</strong> It makes no medical claims and no weight-loss promises. Consult a doctor before starting exercise.</p>
+<p>You must be 13 or older to use the app.</p>
+</div>
+
+<h2 id="app">What the app does</h2>
+<p>Calisthenics at Home is a graded workout program for beginners, at home, with no equipment.</p>
+<ul>
+<li>Four stages. The stage advances by the number of workouts you finish. A missed week does not move you backward. On the plan screen you can also pick a stage yourself.</li>
+<li>Two workouts, A and B, alternating. The screen shows a target of three workouts a week, with a rest day between them.</li>
+<li>Eight core exercises, each in four levels, plus a library grouped by body area. Each exercise has an animation, instructions, and a link to a YouTube search.</li>
+<li>A timer for sets, holds, and rest, and a short beep. Before a workout the screen suggests about five minutes of warm-up. After you finish, it suggests two stretches.</li>
+<li>An optional weight log: a date and kilograms you type. A chart appears after two entries. If you typed a weight goal, the screen shows the gap between that goal and your latest entry. That gap is arithmetic. It is not a meal plan and it is not a promised result.</li>
+</ul>
+<p>You can start without an account. The data then stays on that device only. An account keeps a cloud copy you can open on another device after you sign in.</p>
+<p>The app does not build a diet, does not measure heart rate, and does not read Health Connect or Google Fit.</p>
+
+<h2 id="age">Age</h2>
+<p>You may use the app only if you are 13 or older. The screens do not ask your age, and the app does not knowingly collect information from children under 13. If we learn that an account belongs to someone under 13, we will delete that account and its cloud copy.</p>
+
+<h2 id="device">What is stored on the device</h2>
+<p>The app stores its state in the browser’s local storage, under the key <code>kalis</code>. This happens even without an account.</p>
+<ul>
+<li><strong>Profile.</strong> A name (required to start, up to 40 characters), the start date from the device clock, and a weight goal in kilograms if you typed one. The weight goal is asked only on the email sign-up form, and it is optional. The no-account form has no goal field.</li>
+<li><strong>Weigh-ins.</strong> A date and a weight in kilograms. The form accepts 30 to 300 and rounds to one decimal. You can delete one weigh-in from the weight screen.</li>
+<li><strong>Finished workouts.</strong> The date, workout A or B, the stage number, and how it felt if you chose: easy, medium, or hard (קל, בינוני, קשה). A workout is saved only after you finish and choose a feeling. Leaving midway does not add a record.</li>
+<li><strong>Manual stage.</strong> If you picked a stage on the plan screen instead of the automatic stage.</li>
+<li><strong>Rotation counter.</strong> A number for each of the two workouts, used to advance the exercise that rotates.</li>
+</ul>
+<p>While you sign up with email, and before the code is confirmed, the app also stores a key <code>kalis_pending</code> with your name, and with a weight or goal if you typed them. After a successful sign-in that key is removed from the device. If you leave midway, it can remain until you clear the app’s storage.</p>
+<p>There is no password, and the app does not store one.</p>
+<p>During a workout the app can ask the screen to stay on, and it can play a beep. Both stay on the device and are not sent anywhere.</p>
+
+<h2 id="account">Account and cloud save</h2>
+<p>The account is optional. Without one, everything stays under <code>kalis</code> on that device.</p>
+<p>If you create an account, sign-in and the cloud copy go through Supabase.</p>
+<ul>
+<li><strong>Email and a one-time code.</strong> When you tap „שלח לי קוד למייל” (send me a code by email), the app sends the email address and the name to Supabase. That request creates or updates a user with the email and the name even if you never type the code. Weight and goal stay on the device, under <code>kalis_pending</code>, until sign-in succeeds. The email contains a code, and you can also open the link in the email.</li>
+<li><strong>Google.</strong> If the screen shows „המשך עם Google” (continue with Google), you can sign in with Google. After sign-in the app reads the email and the name that come with the account. It does not store a profile photo. If that button is not shown, email-code sign-in and continuing without an account are still available.</li>
+<li><strong>The cloud row.</strong> After sign-in the app writes a row in the <code>user_state</code> table with your user id (<code>user_id</code>), the data object (<code>data</code>), and a timestamp (<code>updated_at</code>). <code>data</code> is the same state as <code>kalis</code>, and the profile also includes the email address.</li>
+<li><strong>Another device.</strong> If the cloud already has a profile, it replaces what is stored on the device. If it does not, what is on the device, including <code>kalis_pending</code>, is uploaded.</li>
+<li><strong>Later edits.</strong> While you are signed in, a change is saved on the device and the cloud row is updated. The app reads and writes the row for the signed-in user id.</li>
+</ul>
+<p>The Supabase library keeps the sign-in session in local storage so you are not asked for a new code every time you open the app.</p>
+<p>On launch, if that library has loaded, the app asks Supabase which sign-in methods are available. That request is not your workout log.</p>
+<p>On the plan screen (תוכנית), under „החשבון שלי” (my account):</p>
+<ul>
+<li>If you are signed in, your email is shown with a „התנתקות” (sign out) button.</li>
+<li>Sign-out ends the session and removes <code>kalis</code> from that device. It does not delete the <code>user_state</code> row or the user. Signing in again brings the cloud copy back.</li>
+<li>If you are not signed in, the screen offers „יצירת חשבון” (create an account). Someone who continued without an account does not see sign-out.</li>
+</ul>
+
+<h2 id="not">What is not collected</h2>
+<p>The app code has no analytics, no ads, and no advertising identifier. It does not ask for location, contacts, photos, camera, or microphone. It does not connect to Health Connect or Google Fit, it does not take payment, and it has no age or date-of-birth field.</p>
+<p>We do not sell personal information.</p>
+
+<h2 id="others">Services the app contacts</h2>
+<ul>
+<li><strong>Supabase.</strong> Checking sign-in methods on launch, sending the email code, sign-in, and saving the <code>user_state</code> table if you have an account.</li>
+<li><strong>jsDelivr.</strong> Loading the Supabase library, <span class="ltr">@supabase/supabase-js</span> version 2.45.4. The request can include the device IP address.</li>
+<li><strong>Google Fonts.</strong> Loading the Rubik font. The request can include the device IP address. This is a font, not an analytics product.</li>
+<li><strong>Google.</strong> Only if you tap „המשך עם Google”.</li>
+<li><strong>YouTube.</strong> Only if you tap „סרטונים ביוטיוב” (videos on YouTube). A search page opens. The search words are the exercise name in English, not your name and not your weight. What happens on YouTube is covered by YouTube’s terms and privacy policy.</li>
+</ul>
+<p>There is no separate analytics SDK in the code.</p>
+
+<h2 id="why">Why the data is used</h2>
+<p>To show your program, remember workouts and weigh-ins, let you sign in if you asked for an account, and show that copy on another device after you sign in. Not for advertising and not for sale.</p>
+
+<h2 id="retention">How long it is kept</h2>
+<p>On the device: until <code>kalis</code> is removed (sign-out, if you have an account, or clearing the app’s storage) or until you delete a single weigh-in.</p>
+<p>In the cloud: until you ask for the account to be deleted, or until an account for someone under 13 is deleted. The app does not delete the cloud copy automatically after a number of days. How to ask, what is deleted, and the time: <a href="../delete-account/">Delete account</a>. The period is 30 days from when we have the email address on the account.</p>
+
+<h2 id="changes">Changes</h2>
+<p>If this policy changes, the effective date at the top of the page will change. The app does not send a separate notice.</p>
+
+<h2 id="contact">Contact</h2>
+<p><a href="mailto:tailgild.store@gmail.com">tailgild.store@gmail.com</a></p>
+<p class="footer">Hebrew version: <a href="../../privacy/" hreflang="he" lang="he">עברית</a></p>
+</main>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="איך למחוק חשבון בקליסטניקס מהבית: התנתקות במכשיר, ובקשת מחיקה במייל תוך 30 יום.">
+<title>מחיקת חשבון — קליסטניקס מהבית</title>
+<link rel="stylesheet" href="../style.css">
+<link rel="canonical" href="https://11sahar11.github.io/calisthenics-home-legal/delete-account/">
+<link rel="alternate" hreflang="he" href="https://11sahar11.github.io/calisthenics-home-legal/delete-account/">
+<link rel="alternate" hreflang="en" href="https://11sahar11.github.io/calisthenics-home-legal/en/delete-account/">
+<link rel="alternate" hreflang="x-default" href="https://11sahar11.github.io/calisthenics-home-legal/delete-account/">
+</head>
+<body>
+<a class="skip" href="#main">דילוג לתוכן</a>
+<header class="top">
+<div class="top-inner">
+<div class="top-row">
+<a class="brand" href="../">קליסטניקס מהבית</a>
+<a class="lang" href="../en/delete-account/" hreflang="en" lang="en">English</a>
+</div>
+<p class="bars" aria-hidden="true"><i></i><i></i><i></i><i></i></p>
+</div>
+</header>
+<nav class="nav" aria-label="מסמכים">
+<a href="../privacy/">פרטיות</a>
+<a href="../terms/">תנאים</a>
+<a href="./" aria-current="page">מחיקת חשבון</a>
+</nav>
+<main class="wrap" id="main">
+<h1>מחיקת חשבון</h1>
+<p class="meta">קליסטניקס מהבית (calisthenics-home). תאריך תחולה: <time datetime="2026-11-21">21 בנובמבר 2026</time></p>
+<p class="lede">אין באפליקציה כפתור שמוחק את החשבון בענן. התנתקות מוחקת את העותק במכשיר הזה בלבד. מחיקת החשבון ועותק הענן נעשית בבקשה למייל, ואנחנו משלימים אותה בתוך 30 יום.</p>
+<div class="notice">
+<p><strong>אפליקציית כושר, לא שירות רפואי.</strong> אין באפליקציה טענות רפואיות ואין הבטחות לירידה במשקל. התייעצו עם רופא לפני שמתחילים להתאמן.</p>
+<p>השימוש מיועד לבני 13 ומעלה.</p>
+</div>
+
+<h2 id="signed-in">אם יש לכם חשבון</h2>
+<p>חשבון נוצר בהרשמה עם מייל (קוד חד-פעמי, בלי סיסמה) או, אם הכפתור מופיע, עם „המשך עם Google”.</p>
+<h3>מה אפשר לעשות בתוך האפליקציה</h3>
+<ol>
+<li>פתחו את הלשונית „תוכנית”.</li>
+<li>גללו אל „החשבון שלי”. שם מופיע המייל שאיתו נכנסתם.</li>
+<li>לחצו „התנתקות”.</li>
+</ol>
+<p>ההתנתקות מסיימת את הכניסה ומוחקת את המפתח <code>kalis</code> מהמכשיר הזה. היא לא מוחקת את המשתמש ב-Supabase ולא את השורה בטבלה <code>user_state</code>. כניסה מחדש, באותו מכשיר או באחר, מחזירה את עותק הענן.</p>
+<p>במסך „משקל” אפשר למחוק שקילה אחת בכל פעם, עם סמל הפח. אם אתם מחוברים, העותק בענן מתעדכן בלי השקילה הזו. זו לא מחיקת חשבון.</p>
+<h3>מחיקת החשבון עצמו — במייל</h3>
+<p>שלחו בקשה אל <a href="mailto:tailgild.store@gmail.com?subject=Delete%20calisthenics-home%20account">tailgild.store@gmail.com</a>. כתבו את כתובת המייל של החשבון, אם נכנסתם עם Google או עם קוד, ושאתם מבקשים למחוק את החשבון ואת הנתונים בענן. אין סיסמה לשלוח, ואין צורך במסמכי זיהוי.</p>
+<p>אם ההודעה לא כוללת את מייל החשבון, נענה ונבקש אותו. 30 הימים נספרים מהרגע שיש לנו את הכתובת הזו.</p>
+
+<h2 id="local">אם אין חשבון</h2>
+<p>אם בחרתם „המשך בלי חשבון”, אין משתמש בענן למחוק. השם, האימונים והשקילות נמצאים רק במכשיר, במפתח <code>kalis</code>. אין במסכים כפתור שמוחק את כל המידע המקומי בבת אחת, ואין כפתור התנתקות.</p>
+<p>שקילה בודדת נמחקת במסך המשקל. כדי למחוק את כל העותק המקומי מפנים את נתוני האפליקציה במכשיר. אם פתחתם את האפליקציה בדפדפן, מפנים את נתוני האתר. מייל אלינו לא מוצא עותק בענן שלא נוצר.</p>
+<p>אם התחלתם הרשמה ולא סיימתם, ייתכן שנשאר במכשיר מפתח <code>kalis_pending</code> (שם, ואולי משקל או יעד). גם אותו מוחק פינוי האחסון. אם נשלח קוד, ייתכן שכבר נוצר משתמש עם המייל והשם. את המשתמש הזה מוחקים בבקשת המייל למעלה.</p>
+
+<h2 id="deleted">מה נמחק בענן</h2>
+<p>אחרי בקשת מייל שמזהה את החשבון, בתוך 30 יום, נמחק:</p>
+<ul>
+<li>המשתמש בכניסה: כתובת המייל, השם שנשמר עם הכניסה, והסשן.</li>
+<li>השורה שלכם בטבלה <code>user_state</code>, כולל <code>user_id</code>, <code>data</code> ו-<code>updated_at</code>.</li>
+<li>בתוך <code>data</code>: השם, עותק המייל, יעד משקל אם הוקלד, תאריך ההתחלה, שקילות (תאריך וקילוגרמים), אימונים שהסתיימו (תאריך, א׳ או ב׳, שלב, ותחושה אם נבחרה), בחירת שלב ידנית, ומוני התרגיל המתחלף.</li>
+</ul>
+<p>לא נשאר אצלנו עותק של האימונים, השקילות או הפרופיל לשימוש האפליקציה. מחיקה מהענן לא מוחקת לבד את <code>kalis</code> או את <code>kalis_pending</code> במכשיר. את אלה מסירים בהתנתקות (אם הייתם מחוברים) או בפינוי אחסון האפליקציה בכל מכשיר שבו השתמשתם.</p>
+<p>ההודעה ששלחתם משמשת לביצוע המחיקה. היא לא נכנסת לאפליקציה ולא משמשת לפרסום.</p>
+
+<h2 id="kept">מה לא נמחק מכאן</h2>
+<ul>
+<li>נתונים שנשארו באחסון של מכשיר, עד שתפנו אותו או תתנתקו באותו מכשיר.</li>
+<li>היסטוריה ביוטיוב, אם פתחתם קישור לסרטון. את זה מוחקים אצל YouTube, לא אצלנו.</li>
+<li>יומני בקשות אצל ספק גופן, אצל רשת הפצת הספרייה, או אצל ספק הענן, אם הם שומרים כאלה אצלם. אין לנו עותק נפרד של יומן האימונים מחוץ ל-<code>user_state</code>.</li>
+</ul>
+
+<h2 id="after">אחרי המחיקה</h2>
+<p>אפשר להמשיך להשתמש באפליקציה בלי חשבון, במכשיר שהאחסון שלו פונה. כניסה עם אותו מייל אחרי המחיקה יוצרת חשבון חדש וריק. את העותק שנמחק אי אפשר לשחזר מהאפליקציה.</p>
+
+<h2 id="contact">יצירת קשר</h2>
+<p><a href="mailto:tailgild.store@gmail.com?subject=Delete%20calisthenics-home%20account">tailgild.store@gmail.com</a></p>
+<p class="footer">גרסה באנגלית: <a href="../en/delete-account/" hreflang="en" lang="en">English</a>. ראו גם את <a href="../privacy/">מדיניות הפרטיות</a>.</p>
+</main>
+</body>
+</html>
